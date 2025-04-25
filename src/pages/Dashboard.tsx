@@ -4,6 +4,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import StarField from '@/components/ui/StarField';
 import SpaceXLatestLaunch from '@/components/dashboard/SpaceXLatestLaunch';
+import { SpaceWeatherCard } from '@/components/dashboard/SpaceWeatherCard';
+import { SatelliteTracker } from '@/components/dashboard/SatelliteTracker';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -27,18 +29,9 @@ const Dashboard = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* SpaceX Latest Launch Card */}
             <SpaceXLatestLaunch />
-            
-            {/* Placeholder card for future space weather data */}
-            <div className="glass-card p-8 rounded-xl min-h-[400px] flex items-center justify-center">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-white mb-2">Space Weather Data</h2>
-                <p className="text-space-muted">
-                  Our live space weather monitoring is under development. Check back soon for real-time data.
-                </p>
-              </div>
-            </div>
+            <SpaceWeatherCard />
+            <SatelliteTracker />
           </div>
         </div>
       </main>
